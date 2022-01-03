@@ -26,3 +26,18 @@
         margin: 20px 0 35px 0;
     }
 }
+
+.fonctionnement {
+    width: 100%;
+    &__container {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__step {
+        width: 100%;
+        padding: 20px;
+        background-color: $bg_color2;
+        margin-bottom: 20px;
+    }
+}
