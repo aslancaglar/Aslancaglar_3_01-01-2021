@@ -1,0 +1,12 @@
+@mixin shadow_inside {
+    box-shadow: inset 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin btn {
+    display: block;
+    background: rgb(173, 95, 220);
+    background: linear-gradient(0deg, rgba(173, 95, 220, 1) 0%, rgba(238, 116, 218, 1) 100%);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 25px;
+}

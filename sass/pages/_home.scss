@@ -1,0 +1,28 @@
+.location_pick {
+    background-color: #eaeaea;
+    height: 50px;
+    @include shadow_inside;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #353535;
+    & span {
+        font-weight: 400;
+    }
+    & i {
+        padding-right: 18px;
+    }
+}
+
+.hero {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    flex-direction: column;
+    height: 290px;
+    background-color: $bg_color2;
+    text-align: center;
+    &__description {
+        margin: 20px 0 35px 0;
+    }
+}
