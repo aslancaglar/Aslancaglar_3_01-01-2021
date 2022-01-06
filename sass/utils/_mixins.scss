@@ -2,6 +2,10 @@
     box-shadow: inset 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
+@mixin shadow_outside {
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.15);
+}
+
 @mixin btn {
     display: block;
     background: rgb(173, 95, 220);
@@ -9,4 +13,5 @@
     color: #fff;
     padding: 15px 20px;
     border-radius: 25px;
+    @include shadow_outside;
 }

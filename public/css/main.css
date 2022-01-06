@@ -77,9 +77,6 @@ body {
 
 .fonctionnement {
   width: 100%;
-}
-
-.fonctionnement__container {
   padding: 50px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,11 +87,56 @@ body {
           flex-direction: column;
 }
 
+.fonctionnement__title {
+  margin: 0 0 30px 0;
+}
+
+.fonctionnement__steps {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+}
+
 .fonctionnement__step {
+  margin: 0 0 0.5rem 0;
+  counter-increment: stepnumbers;
+  position: relative;
   width: 100%;
-  padding: 20px;
+  padding: 25px;
   background-color: #f6f6f6;
   margin-bottom: 20px;
+  border-radius: 20px;
+  font-weight: 400;
+  -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.15);
+}
+
+.fonctionnement__step i {
+  color: #7e7e7e;
+  margin: 0 20px 0 0;
+  font-size: 18px;
+}
+
+.fonctionnement__step:hover {
+  background-color: #f5edff;
+}
+
+.fonctionnement__step:hover > i {
+  color: #9356DC;
+}
+
+.fonctionnement__step::before {
+  content: counter(stepnumbers);
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: -10px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  top: 25px;
+  background: #9356DC;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .btn {
@@ -105,4 +147,6 @@ body {
   color: #fff;
   padding: 15px 20px;
   border-radius: 25px;
+  -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.15);
 }

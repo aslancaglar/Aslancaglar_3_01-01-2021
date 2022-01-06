@@ -29,15 +29,51 @@
 
 .fonctionnement {
     width: 100%;
-    &__container {
-        padding: 50px 20px;
-        display: flex;
-        flex-direction: column;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    &__title {
+        margin: 0 0 30px 0;
+    }
+    &__steps {
+        counter-reset: my-awesome-counter;
+        list-style: none;
     }
     &__step {
+        margin: 0 0 0.5rem 0;
+        counter-increment: stepnumbers;
+        position: relative;
         width: 100%;
-        padding: 20px;
+        padding: 25px;
         background-color: $bg_color2;
         margin-bottom: 20px;
+        border-radius: $radius;
+        font-weight: 400;
+        @include shadow_outside;
+        & i {
+            color: $icon_color;
+            margin: 0 20px 0 0;
+            font-size: 18px;
+        }
+        &:hover {
+            background-color: $bg_card_hower;
+            >i {
+                color: $primary_color;
+            }
+        }
+        &::before {
+            content: counter(stepnumbers);
+            color: #fff;
+            font-size: 14px;
+            position: absolute;
+            left: -10px;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            top: 25px;
+            background: $primary_color;
+            border-radius: 50%;
+            text-align: center;
+        }
     }
 }
